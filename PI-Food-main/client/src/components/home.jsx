@@ -27,6 +27,7 @@ function Home() {
 
     function handleFilterDiets(e) {
         dispatch(filterDiet(e.target.value))
+        setCurrentPage(1);
     }
 
     function handleOrderName(e) {

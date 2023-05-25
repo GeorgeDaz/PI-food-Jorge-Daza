@@ -11,11 +11,6 @@ function About() {
             <p>se oculta un poder de bendición.</p>
             <p>Con cada bocado sabio y consciente,</p>
             <p>nuestra salud se hace floreciente.</p>
-
-            <p>Frutas frescas y verduras vibrantes,</p>
-            <p>nutren y llenan de fuerzas radiantes.</p>
-            <p>Granos enteros y proteínas puras,</p>
-            <p>fortalecen el cuerpo, son dulces curas.</p>
         </div>
     )
 }

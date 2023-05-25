@@ -85,3 +85,6 @@ export function getDetail(id) {
     }
   };
 }
+export const cleanData = () => {
+  return { type: "CLEAN_DATA" };
+};
