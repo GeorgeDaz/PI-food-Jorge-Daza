@@ -75,7 +75,7 @@ export default function Create() {
     return (
         <div className={styles.mainCreate}>
             <Link to='/home'> <li className={styles.backHome}> Back </li> </Link>
-
+            <h1>Lets create a great recipe !</h1>
             <form autoComplete="off" className={styles.formCreate} onSubmit={(e) => handleSubmit(e)}>
                 <label className={styles.label}>Title:</label>
                 <input
@@ -142,6 +142,7 @@ export default function Create() {
                 // onBlur={() => validate(input)}
                 />
                 <span>{!validSteps && 'REQUIRED'}</span>
+
                 {!input.name || !validSteps || !validName || !validSummary ? (
                     <button disabled>
                         Submit

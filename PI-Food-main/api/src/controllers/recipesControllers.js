@@ -4,7 +4,9 @@ const { API_KEY } = process.env;
 
 const getRecipesApi = async () => {
   return await axios
-    .get(`https://run.mocky.io/v3/84b3f19c-7642-4552-b69c-c53742badee5`)
+    .get(
+      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&number=100&addRecipeInformation=true&number=100`
+    )
     //   https://run.mocky.io/v3/84b3f19c-7642-4552-b69c-c53742badee5   // mocky para practicar
     // https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&number=100&addRecipeInformation=true&number=100 // API
     .then((recipes) => {
