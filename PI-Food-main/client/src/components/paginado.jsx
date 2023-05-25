@@ -31,8 +31,5 @@ Paginado.propTypes = {
         PropTypes.string,
         PropTypes.number,
     ]).isRequired,
-    paginado: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number,
-    ]).isRequired,
+    paginado: PropTypes.any.isRequired
 };

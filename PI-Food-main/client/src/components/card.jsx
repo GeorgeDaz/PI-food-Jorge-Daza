@@ -5,21 +5,12 @@ function Card({ name, img, diets }) {
     return (
         <div className={styles.cardContainer}>
             <div className={styles.card}>
-                <img src={img} alt='NOT FOUND IMG' width='200px' height='250px' />
+                <img className={styles.image} src={img} alt='NOT FOUND IMG' width='200px' height='250px' />
                 <h2 > {name} </h2>
                 <p> {diets} </p>
             </div>
         </div>
     )
-    // return (
-
-
-    //     <div className={styles.cardContainer}>
-    //         <h2>Recipe Name</h2>
-    //         <p>Imagen</p>
-    //         <p>Dietas</p>
-    //     </div>
-    // )
 }
 
 Card.propTypes = {

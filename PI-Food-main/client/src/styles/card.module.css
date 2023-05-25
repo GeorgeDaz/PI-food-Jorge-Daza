@@ -1,16 +1,46 @@
 .cardContainer {
+  width: 230px;
+  height: 370px;
   display: flex;
   flex-direction: column;
-  background-color: bisque;
+  background-color: rgba(214, 209, 209, 0.15);
   border: 1px solid gray;
-  border-radius: 5px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 1);
+  border-radius: 12px;
   padding: 25px;
   cursor: pointer;
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;
   transform: translateZ(0);
   transition: trasnform 0.25s ease-out;
+  text-align: center;
 }
 .cardContainer:hover {
   transform: scale(1.05);
+}
+
+p {
+  text-transform: capitalize;
+  padding: 0 0.5rem;
+  font-size: 18px;
+  font-weight: 300;
+  box-shadow: none;
+  text-decoration: solid;
+  color: black;
+}
+.image {
+  width: 230px;
+  height: 150px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+h2 {
+  padding: 2px;
+  text-align: center;
+  font-size: 22px;
+  margin-top: 10;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: none;
 }

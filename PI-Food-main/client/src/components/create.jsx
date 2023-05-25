@@ -11,10 +11,10 @@ function validate(input) {
         error.name = 'Name field is required'
     } else if (!input.summary) {
         error.summary = 'Resume field is required'
-    } else if (input.healthyScore < 0 || input.healthyScore > 100) {
-        error.healthyScore = 'Healthy Score have to be a number into 0 to 100'
-    } else if (!input.healthyScore) {
-        error.healthyScore = 'Healthy Score field is required'
+    } else if (input.healthScore < 0 || input.healthScore > 100) {
+        error.healthScore = 'Health Score have to be a number into 0 to 100'
+    } else if (!input.healthScore) {
+        error.healthScore = 'Healthy Score field is required'
     } else if (!input.image.includes('https://')) {
         error.image = 'Link Image field must be a link'
     } else if (!input.image) {
@@ -30,8 +30,8 @@ export function Create() {
     const [input, setInput] = useState({
         name: '',
         summary: '',
-        healthyScore: '',
-        steps: '',
+        healthScore: '',
+        steps: [],
         image: '',
         dietss: []
     })
@@ -70,14 +70,14 @@ export function Create() {
     function handleSubmit(e) {
         e.preventDefault();
         console.log(input)
-        if (!error.name && !error.summary && !error.healthyScore && !error.image) {
+        if (!error.name && !error.summary && !error.healthScore && !error.image) {
             dispatch(postRecipe(input))
             alert('Recipe created')
             setInput({
                 name: '',
                 summary: '',
                 healthyScore: '',
-                steps: '',
+                steps: [],
                 image: '',
                 diets: []
             });
@@ -123,12 +123,12 @@ export function Create() {
                         <input
                             className={styles.input}
                             type='number'
-                            value={input.healthyScore}
-                            name='healthyScore'
+                            value={input.healthScore}
+                            name='healthScore'
                             onChange={handleChange}
                         />
-                        {error.healthyscore && (
-                            <p>{error.healthyscore}</p>
+                        {error.healthScore && (
+                            <p>{error.healthScore}</p>
                         )}
                     </div>
                     <div><label className={styles.label}>Steps:</label>
@@ -154,7 +154,7 @@ export function Create() {
                     </div>
                     <div><h1>Select diets</h1>
                         {diets.map((diet) => (
-                            <div key={diet}>
+                            <div key={`${diet.name}`}>
                                 <label className={styles.label}> {diet.name}</label>
                                 <input
                                     className={styles.input}
@@ -174,18 +174,3 @@ export function Create() {
         </div>
     )
 }
-
-
-
-// import '../styles/create.module.css'
-// import Navbar from './navbar'
-
-// function Create() {
-//     return (
-//         <div>
-//             <Navbar />
-//             <p>Esta es la pagina de create</p>
-//         </div>
-//     )
-// }
-// export default Create

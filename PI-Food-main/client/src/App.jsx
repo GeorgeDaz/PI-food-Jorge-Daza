@@ -4,7 +4,7 @@ import Detail from "./components/detail"
 import { Create } from "./components/create"
 import Landing from "./components/landing"
 import About from "./components/about"
-
+import "./App.css"
 function App() {
   return (
     <div>
