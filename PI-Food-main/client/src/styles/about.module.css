@@ -1,0 +1,10 @@
+.backHome {
+  font-size: 35px;
+  color: rgba(212, 3, 3, 0.25);
+  font-weight: bold;
+  display: inline-block;
+}
+.head {
+  font-weight: bold;
+  font-size: 35px;
+}

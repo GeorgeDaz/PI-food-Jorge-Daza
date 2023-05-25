@@ -33,8 +33,9 @@ export function getDiets() {
 // CREA UNA NUEVA RECETA
 export function postRecipe(payload) {
   return async function () {
+    console.log(payload);
     const json = await axios.post("http://localhost:3001/recipes", payload);
-    console.log(json);
+    // console.log(json);
     return json;
   };
 }

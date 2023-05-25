@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-// import { Link, Navigate, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getDiets, postRecipe } from "../redux/actions";
-import Navbar from "./navbar";
 import styles from '../styles/create.module.css'
 
 function validate(input) {
@@ -49,7 +48,7 @@ export function Create() {
             ...input,
             [e.target.name]: e.target.value
         }))
-        console.log(input)
+        // console.log(input)
     }
 
     function handleCheck(e) {
@@ -58,7 +57,7 @@ export function Create() {
                 ...input,
                 dietss: [...input.diets, e.target.value]
             })
-            console.log(input)
+            // console.log(input)
         } else {
             setInput({
                 ...input,
@@ -69,7 +68,7 @@ export function Create() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(input)
+        // console.log(input)
         if (!error.name && !error.summary && !error.healthScore && !error.image) {
             dispatch(postRecipe(input))
             alert('Recipe created')
@@ -88,11 +87,10 @@ export function Create() {
 
 
     return (
-        <div>
+        <div className={styles.mainCreate}>
 
-            <Navbar />
-
-            <div>
+            <div className={styles.formCreate}>
+                <Link to='/home'> <li className={styles.backHome}> HOME </li> </Link>
                 <h1> ¡Lets create a great Recipe!</h1>
                 <form onSubmit={(e) => handleSubmit(e)}>
                     <div> <label className={styles.label}>Name:</label>

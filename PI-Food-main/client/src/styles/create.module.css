@@ -1,0 +1,44 @@
+.mainCreate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: inline-block;
+  border-radius: 20px;
+  width: 100%;
+  opacity: 95%;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 1);
+  background-color: rgba(212, 3, 3, 0.25);
+}
+.formCreate {
+  width: 100%;
+}
+.input {
+  width: 250px;
+  height: 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 1px;
+  padding-bottom: 5px;
+}
+.label {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-transform: capitalize;
+  padding-right: 15px;
+}
+.buttonsub {
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+}
+
+.backHome {
+  font-size: 35px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  display: inline-block;
+}
