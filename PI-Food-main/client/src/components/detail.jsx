@@ -24,13 +24,14 @@ function Detail() {
             <Navbar />
             {
                 myRecipe.length > 0 ?
-                    <div>
-                        <img src={myRecipe[0].image} alt='No hay imagen' />
+                    <div className={styles.divInterno}>
+                        <img className={styles.img} src={myRecipe[0].image} alt='No hay imagen' />
                         <h1>{myRecipe[0].name}</h1>
                         <h2 >Healthy Level {myRecipe[0].healthScore}</h2>
-                        <h3> Diets: {myRecipe[0].dietss.map((diet) => diet.name ? diet.name + ' / ' : diet + ' / ')}</h3>
-                        <p dangerouslySetInnerHTML={{ __html: myRecipe[0].summary }} />
-                        <h3>Steps: {myRecipe[0].steps.map((step) => step.step ? step.number + "- " + step.step + ' / ' : step + ' / ')}</h3>
+                        <h3 className={styles.h3}> Diets: {myRecipe[0].dietss.map((diet) => diet.name ? diet.name + ' / ' : diet + ' / ')}</h3>
+                        <p className={styles.p} dangerouslySetInnerHTML={{ __html: myRecipe[0].summary }} />
+                        <p className={styles.p}>Steps:</p>
+                        <p className={styles.p}>{myRecipe[0].steps.map((step) => step.step ? <p className={styles.p} key={step.step}> {step.number + "- " + step.step} </p> : step + ' / ')}</p>
 
                     </div> : <h1 className={styles.h1}> LOADING... </h1>
             }
